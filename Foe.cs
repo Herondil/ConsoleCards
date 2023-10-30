@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleCards
 {
-    internal class Foe
+    internal abstract class Foe
     {
         //au niveau de la classe
         public static int NombreEnnemis;
 
-        string name;
         int pv;
+
+        //on impose la définition dans une classe dérivée
+        //DONC il est obligatoire d'avoir une classe dérivée
+        public abstract void Attack();
     }
 }

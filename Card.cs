@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleCards
 {
-    internal class Card
+    //on ne peut pas instancier 
+    internal abstract class Card
     {
 
-
-
         //property
+        //property abstraite
+        // -> les classes dérivées doivent implémenter la property
         public virtual string name {  
             get ;
             protected set ;

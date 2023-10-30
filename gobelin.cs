@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleCards
 {
-    internal class AttackCard : Card
+    internal class Gobelin : Foe
     {
-
-        protected override void ApplyCardEffect()
+        public override void Attack()
         {
-            Console.WriteLine("Un effet d'attaque est appliqué");
+            
         }
     }
 }
