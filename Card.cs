@@ -14,7 +14,7 @@ namespace ConsoleCards
         //property
         public virtual string name {  
             get ;
-            private set ;
+            protected set ;
         }
 
         
