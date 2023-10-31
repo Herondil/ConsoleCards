@@ -1,13 +1,15 @@
 ﻿using ConsoleCards;
+using ClassLibrary1;
+using CardGameEnnemis;
 
 Console.WriteLine("Bievenue dans le jeu de carte !");
 
-
 List<Card> cards = new List<Card>();
 
-cards.Add(new AttackCard());
-cards.Add(new PhysicalAttackCard());
+PhysicalAttackCard  m = new PhysicalAttackCard();
+PhysicalAttackCard  p = new PhysicalAttackCard();
 
+Gobelin g = new Gobelin();
 
 //Pattern ?
 

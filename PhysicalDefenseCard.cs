@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace ConsoleCards
 {
-    internal class PhysicalAttackCard : AttackCard
+    internal class PhysicalDefenseCard : DefenseCard
     {
-        //puissance de la carte
         int power;
-        const int initialPower = 10;
+        const int initialPower = 5;
 
-        public PhysicalAttackCard()
+        PhysicalDefenseCard()
         {
             power = initialPower;
-        }   
+        }
 
         protected override void ApplyCardEffect()
         {
-            Console.WriteLine("L'effet d'attaque physique est appliqué");
+            Console.WriteLine("L'effet de defense physique est appliqué");
         }
     }
 }

@@ -4,22 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+//on aimerait un système qui permette à une carte de s'améliorer
+
 namespace ConsoleCards
 {
-    internal class PhysicalAttackCard : AttackCard
+    internal class HealingCard : Card
     {
-        //puissance de la carte
         int power;
-        const int initialPower = 10;
+        const int initialPower = 5;
 
-        public PhysicalAttackCard()
+        HealingCard()
         {
             power = initialPower;
-        }   
+        }
 
         protected override void ApplyCardEffect()
         {
-            Console.WriteLine("L'effet d'attaque physique est appliqué");
+            Console.WriteLine("L'effet de soin est appliqué");
         }
     }
 }
