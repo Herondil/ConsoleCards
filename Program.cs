@@ -1,24 +1,18 @@
 ﻿using ConsoleCards;
-using ClassLibrary1;
-using CardGameEnnemis;
 
 Console.WriteLine("Bievenue dans le jeu de carte !");
 
 List<Card> cards = new List<Card>();
 
-PhysicalAttackCard  m = new PhysicalAttackCard();
-PhysicalAttackCard  p = new PhysicalAttackCard();
+PhysicalAttackCard m1 = new PhysicalAttackCard();
+PhysicalAttackCard m2 = new PhysicalAttackCard();
 
-Gobelin g = new Gobelin();
+Console.WriteLine(m1.power);
 
-//Pattern ?
+m1++;
 
-//Organisation spécifique du code 
+Console.WriteLine(m1.power);
 
-//singleton ?
-//-> il y a toujours une seule instance d'une classe donnée
+PhysicalAttackCard m3 = m1 + m2;
 
-//-> on doit interdire le "new"
-//-> La classe va créer elle-même son instance
-//-> La classe qui garde une référence vers cette instance unique
-//-> la référence à l'instance est un "public static"
+Console.WriteLine(m3.power);

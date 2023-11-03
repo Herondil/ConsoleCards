@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleCards
 {
-    internal class AttackCard : Card
+    internal abstract class AttackCard : Card
     {
-
-        protected override void ApplyCardEffect()
-        {
-            Console.WriteLine("Un effet d'attaque est appliqué");
-        }
+      
     }
 }

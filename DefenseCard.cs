@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClassLibrary1;
-
 namespace ConsoleCards
 {
     internal class DefenseCard : Card
@@ -12,6 +10,11 @@ namespace ConsoleCards
         public DefenseCard()
         {
             name = "Carte de défense";
+        }
+
+        protected override void ApplyCardEffect()
+        {
+            throw new NotImplementedException();
         }
     }
 }
