@@ -16,7 +16,7 @@ namespace ConsoleCards
             power = initialPower;
         }
 
-        protected override void ApplyCardEffect()
+        public override void ApplyCardEffect()
         {
             Console.WriteLine("L'effet de defense magique est appliqué");
         }

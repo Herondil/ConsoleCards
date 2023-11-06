@@ -12,7 +12,12 @@ namespace ConsoleCards
             name = "Carte de défense";
         }
 
-        protected override void ApplyCardEffect()
+        public override void ApplyCardEffect()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void ApplyCardEffect(Foe _f)
         {
             throw new NotImplementedException();
         }

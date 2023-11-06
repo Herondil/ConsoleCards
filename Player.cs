@@ -16,7 +16,7 @@ namespace ConsoleCards
 
         //property pour le nom
         public string name { get; private set; }
-        int PdV = 5; //valeur par défaut, si le 
+        public int PdV = 5; //valeur par défaut, si le 
         int Energie;
         int PointsArmure;
 
@@ -35,8 +35,8 @@ namespace ConsoleCards
             get { 
                 if(instance == null) //pas fiable ?
                 {
-                    instance = new Player("Player1");
-                    Console.WriteLine("instance crée");
+                    instance = new Player("Le Guerrier");
+                    //Console.WriteLine("instance crée");
                 }
                 return instance; 
             } 
@@ -47,14 +47,35 @@ namespace ConsoleCards
         {
             name = _name;
             cards = new List<Card>(); // initialisation de la main de cartes, main vide
+
+            while(cards.Count() < 6)
+            {
+                Random r = new Random();
+                if(Utils.Win(0.5f))
+                {
+                    cards.Add(new HealingCard());
+                }
+                else
+                {
+                    cards.Add(new MagicAttackCard());
+                }
+            }
         }
+        
+        //Pour afficher la liste des cartes dans la console
         public void AfficherCartes()
         {
             //répétion qui affiche le nom des cartes du Array "main"
             for (int i = 0; i < cards.Count; i++)
             {
-                if (cards[i] != null) Console.WriteLine(cards[i].name);
+                if (cards[i] != null) Console.WriteLine((i+1)+" : "+cards[i].name +" : "+ cards[i].description);
             }
+        }
+
+
+        public void JouerUneCarte(int index)
+        {
+
         }
     }
 }

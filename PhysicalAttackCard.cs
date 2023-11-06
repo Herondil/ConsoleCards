@@ -18,9 +18,14 @@ namespace ConsoleCards
             power = initialPower;
         }   
 
-        protected override void ApplyCardEffect()
+        public override void ApplyCardEffect()
         {
             Console.WriteLine("L'effet d'attaque physique est appliqué");
+        }
+
+        public override void ApplyCardEffect(Foe _f)
+        {
+            throw new NotImplementedException();
         }
 
         //surcharge de l'opérateur ++

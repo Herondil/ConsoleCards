@@ -14,17 +14,27 @@ namespace ConsoleCards
         public MagicAttackCard()
         {
             power = initialPower;
+            name = "Attaque Magique";
+            description = "Attaque l'ennemi avec une puissance de " + power + ".";
         }
 
-        protected override void ApplyCardEffect()
+        public override void ApplyCardEffect(Foe _f)
         {
-            Console.WriteLine("L'effet d'attaque magique est appliqué");
+            Console.WriteLine("Vous lancez une attaque magique sur "+_f.name+" ...");
+            Console.WriteLine( _f.name + " perd "+power+" points de vie.");
+            _f.pv -= power;
         }
 
         public void Upgrade()
         {
             //le pouvoir de la carte augmente de 5
             power += 5;
+        }
+
+
+        public override void ApplyCardEffect()
+        {
+            throw new NotImplementedException();
         }
     }
 }

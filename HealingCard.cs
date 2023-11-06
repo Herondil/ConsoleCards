@@ -14,14 +14,26 @@ namespace ConsoleCards
         int power;
         const int initialPower = 5;
 
-        HealingCard()
+        public HealingCard()
         {
             power = initialPower;
+            name = "Soin";
+            description = "Soigne de " + power + " points de vie.";
         }
 
-        protected override void ApplyCardEffect()
+        public override void ApplyCardEffect()
         {
-            Console.WriteLine("L'effet de soin est appliqué");
+            Console.WriteLine("L'effet de soin est appliqué ...");
+            Console.WriteLine("Vous gagnez "+power+" points de vie !");
+            Player.Instance.PdV += power;
+        }
+
+        //pas très utile
+        public override void ApplyCardEffect(Foe _f)
+        {
+            Console.WriteLine("Vous gagnez " + power + " points de vie !");
+            Player.Instance.PdV += power;
+            Console.WriteLine("Vous avez maintenant " + Player.Instance.PdV + " points de vie.");
         }
     }
 }
