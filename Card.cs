@@ -2,7 +2,9 @@
 internal abstract class Card
 {
 
+
     public string name { get; protected set; }
+   
     public string description { get; protected set; }
 
 
